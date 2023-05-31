@@ -1,0 +1,18 @@
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/takamori/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-ptmmxj sitelibdir\=./.gem.20230529-7302-ptmmxj clean
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-ptmmxj sitelibdir\=./.gem.20230529-7302-ptmmxj
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-ptmmxj sitelibdir\=./.gem.20230529-7302-ptmmxj install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20230529-7302-ptmmxj/bootsnap
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-ptmmxj sitelibdir\=./.gem.20230529-7302-ptmmxj clean

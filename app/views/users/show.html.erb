@@ -1,0 +1,36 @@
+
+<h1 class="sectiontitle"><%= @user.username %>さんのユーザー詳細</h1>
+
+<div class="profile">
+    <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image" %><br>
+    <div class="profilesentence">
+      <%= @user.profile %>
+    </div>
+    <%= link_to "編集", edit_user_path(@user), class: "button is-primary" %>
+</div>
+
+<p class="sectiontitle">掲載中の機材</p>
+<div class="gearpage">
+    <% @user.gears.each do |gear| %>
+        <div class="post">
+            <div>
+                <%=  attachment_image_tag gear, :image ,class: "gearthumb"  %>
+            </div>
+
+            <div class="geardetail">
+                <%= link_to gear.title ,gear_path(gear),class: "geartitle"  %><br>
+                <%= link_to "詳細", gear_path(gear) %>
+                <%= link_to "編集", edit_gear_path(gear) %>
+                <%= button_to '削除', gear_path(gear),  method: :delete, form: { data: { turbo_confirm: "本当に削除しますか？", turbo_frame: '_top' } },class: "deletelink"  %>
+            </div>
+
+        </div>
+    <% end %>
+</div>
+
+
+
+
+
+
+

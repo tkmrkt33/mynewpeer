@@ -1,0 +1,96 @@
+            <% if user_signed_in? %>
+<h1 class="sectiontitle">ようこそ、<%= current_user.username %>さん</h1>
+
+<h1 class="sectiontitle">新着機材</h1>
+<div class="gearpage">
+    <% @gears.each do |gear| %>
+
+        <div class="post">
+            <div>
+            <%= link_to gear_path(gear) do %> <%=  attachment_image_tag gear, :image ,class: "gearthumb"  %> <% end %>
+            </div>
+
+            <div class="geardetail">
+                <%= link_to gear.title ,gear_path(gear),class: "geartitle" %>
+                <br>
+                <%= truncate(gear.body , length: 32) %>
+            </div>
+        </div>
+    <% end %>
+    <%= link_to "すべての投稿一覧はこちら", gears_path, class: "nav-link" %>
+
+</div>
+
+
+
+            <% else %>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-subheading"></div>
+                <div class="masthead-heading text-uppercase">find your new gear</div>
+                <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary btn-xl text-uppercase" %><br><br><br>
+                <p>または：<%= link_to "アカウントをお持ちですか？", new_user_session_path, class: "alreadySigned" %></p>
+            </div>
+        </header>
+
+        <!-- Services-->
+        <section class="page-section" id="services">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Services</h2>
+                    <p class="text-muted">
+                    こんなお悩みはありませんか？<br>
+                    『欲しいペダルの流通が無く、置いてある楽器店が無い・・・』<br>
+                    『楽器店で試した時は良かったが、自分のアンプとの相性が合わなかった・・・』<br>
+                    『手の届かないあのヴィンテージ・ペダル、一度でいいから鳴らしてみたい！』<br>
+                    MY NEW PEERがお悩みを解決します。あなたはもう、賭けに出るような気持ちでペダルを買わなくていいのです！
+                    </p>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-tablet fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Try'em all!</h4>
+                        <p class="text-muted">あなたが次に買おうと思っていたあのペダル、他の誰かが持っているかも？お持ちの楽器と組み合わせて、試させてもらいましょう！</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-user-friends fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Seek a geek</h4>
+                        <p class="text-muted">気の合うプレイヤーや、頼れるエフェクター・フリークと知り合えるかもしれません！あなたの音楽人生に大きな影響をもたらす人と出会えるかも？</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Trading</h4>
+                        <p class="text-muted">試したペダルを気に入って、持ち主も売却可能ならその場で購入しましょう。支払い方法は現金でも、ペダル同士の交換でもOK。</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact-->
+        <section class="page-section" id="contact">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">はじめよう</h2><br>
+                    <%= link_to "新規登録", new_user_registration_path, class: "btn btn-primary btn-xl text-uppercase" %><br><br>
+                    <%= link_to "アカウントをお持ちですか？", new_user_session_path, class: "alreadySigned" %>
+                </div>
+
+
+
+
+            </div>
+        </section>
+        
+        <% end %>

@@ -1,0 +1,30 @@
+<h1 class="sectiontitle"><%= @gear.title %></h1>
+
+
+<div class="gearpage">
+          <div>
+              <%=  attachment_image_tag @gear, :image ,class: "gearimage"  %>
+          </div>
+
+
+
+              
+
+          <div class="gearsentence">
+                <%= simple_format @gear.body %>
+
+
+                <p class="ownername">
+                  投稿者<br>
+                  <%= link_to user_path(@gear.user) do %><%= @gear.user.username %>さん
+                <% end %>
+                </p>
+
+                <%= attachment_image_tag @gear.user, :profile_image, fallback: "no-image.png", class: "userthumb" %><br>
+                <p class="text-center">
+                <%= @gear.user.profile %>
+                </p>
+
+          </div>
+</div>
+

@@ -1,0 +1,21 @@
+
+<h1 class="sectiontitle">新規投稿</h1>
+
+<%= form_for @gear do |f| %>
+          <div class="field">
+            <%= f.label :title, "ブランド・機種名" %>
+            <%= f.text_field :title, class: "input" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :body, "詳細" %>
+            <%= f.text_area :body, class: "textarea" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :image, "写真" %>
+            <%= f.file_field :image %>
+          </div>
+
+          <%= f.submit '投稿する', class: "button" %>
+        <% end %>

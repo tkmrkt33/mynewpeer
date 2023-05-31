@@ -1,0 +1,53 @@
+
+    <h1 class="sectiontitle">
+      新規登録
+    </h1>
+
+
+    <div class="loginform">
+      <div>
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+
+        <div class="field">
+          <%= f.label :ユーザー名 %>
+          <p class="control has-icons-left">
+            <%= f.text_field :username, autofocus: true, autocomplete: "email", :placeholder => "username", class: "form-control" %>
+          </p>
+        </div>
+
+        <div class="field">
+          <%= f.label :メールアドレス %>
+          <p class="control has-icons-left">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", :placeholder => "email", class: "form-control" %>
+          </p>
+        </div>
+
+        <div class="field">
+          <%= f.label :パスワード %>
+          <% if @minimum_password_length %>
+          <em>(最低<%= @minimum_password_length %>文字)</em>
+          <% end %>
+          <p class="control has-icons-left">
+          <%= f.password_field :password, autocomplete: "new-password", :placeholder => "password", class: "form-control" %>
+          </p>
+        </div>
+
+        <div class="field">
+          <%= f.label :パスワード確認 %>
+          <p class="control has-icons-left">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", :placeholder => "password confirmation", class: "form-control" %>
+          </p>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "Sign up", class: "btn btn-primary btn-block mb-4 loginbtn" %>
+        </div>
+        <% end %>
+
+        <%= render "devise/shared/links" %>
+      </div>
+    </div>
+
+

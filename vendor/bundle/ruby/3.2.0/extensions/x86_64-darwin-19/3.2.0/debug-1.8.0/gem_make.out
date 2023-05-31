@@ -1,0 +1,19 @@
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+/Users/takamori/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-tzbn1e sitelibdir\=./.gem.20230529-7302-tzbn1e clean
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-tzbn1e sitelibdir\=./.gem.20230529-7302-tzbn1e
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-tzbn1e sitelibdir\=./.gem.20230529-7302-tzbn1e install
+/usr/bin/install -c -m 0755 debug.bundle ./.gem.20230529-7302-tzbn1e/debug
+
+current directory: /Users/takamori/mynewpeer/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20230529-7302-tzbn1e sitelibdir\=./.gem.20230529-7302-tzbn1e clean

@@ -1,0 +1,21 @@
+<h1 class="sectiontitle">新着投稿</h1>
+
+<div class="gearpage">
+    <% @gears.each do |gear| %>
+
+        <div class="post">
+            <div>
+            <%= link_to gear_path(gear) do %> <%=  attachment_image_tag gear, :image ,class: "gearthumb"  %> <% end %>
+            </div>
+
+            <div class="geardetail">
+                <%= link_to gear.title ,gear_path(gear),class: "geartitle" %>
+                <br>
+                <%= truncate(gear.body , length: 32) %>
+            </div>
+
+        </div>
+    <% end %>
+</div>
+
+
